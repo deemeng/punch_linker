@@ -8,6 +8,14 @@ PUNCH_Linker is trained on more than 2000 DFL linker dataset from <a href="https
 
 ## 🐣 Getting Started
 Currently, we provide two ways to use this perdictor: Docker or Download source code from this Github.
+### Pre-requirements
+This predictor requires sequences embedded with [ProtTrans](https://github.com/agemagician/ProtTrans) and [MSA Transformer](https://github.com/facebookresearch/esm). If you don't have them available, please visit the [embedding](https://github.com/deemeng/embedding) section of our project first to embed the sequences. 
+Note,
+* the file format should be `[SEQUENCE_NAME/ID].npy`, replace *SEQUENCE_NAME/ID* with the actural sequence ID, it should be the same as the name from `.fasta` file.
+* the matrix size should be 
+We maintain this separation due to the requirements from [CAID3](https://caid.idpcentral.org/challenge), but we may edit or merge them in the future.
+
+
 ### Docker
 #### Dependencies
 * Docker Desktop 4.27.2 or higher
