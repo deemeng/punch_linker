@@ -13,9 +13,9 @@ This predictor requires sequences embedded with [ProtTrans](https://github.com/a
 Note, 
 * File format should be `[SEQUENCE_NAME/ID].npy`, replace *SEQUENCE_NAME/ID* with the actural sequence ID, it should be the same as the name from `.fasta` file.
 * Matrix shape: \
-  **Onehot**: (1, SEQUENCE_LENGTH, 21) \
-  **ProtTrans**: (1, SEQUENCE_LENGTH, 1024) \
-  **MSA Transformer**: (1, SEQUENCE_LENGTH, 768)
+  **Onehot**: `(1, SEQUENCE_LENGTH, 21)` \
+  **ProtTrans**: `(1, SEQUENCE_LENGTH, 1024)` \
+  **MSA Transformer**: `(1, SEQUENCE_LENGTH, 768)`
 
 📣‼️If you don't have them available, please visit the **[embedding](https://github.com/deemeng/embedding)** section of our project first to embed the sequences.‼️
 
