@@ -12,7 +12,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python -m pip install -r requirements.txt
 
 # Copy the source code into the container.
-WORKDIR /dofo
-COPY . /dofo/.
+WORKDIR /punch_linker
+COPY . /punch_linker/.
 
-CMD python /dofo/main.py
+CMD python /punch_linker/main.py

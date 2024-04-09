@@ -3,19 +3,19 @@ from params.utils import create_folder
 
 # !!! IMPORTANT
 # Change this to True if you want to manually provide these paths.
-user = True
+user = False
 '''
 1. Data-Input
 
 an example:
 ---------------------
 path_input = '/home/dimeng/caid3/linker_long.fasta'
-path_msaTrans = '/home/dimeng/caid3/output/msaTrans'
-path_protTrans = '/home/dimeng/caid3/output/protTrans'
-'''
-path_input = '/home/dimeng/caid3/linker_long.fasta'
 path_msaTrans = '/home/dimeng/project/domain_linker/data/caid/features/msaTrans'
 path_protTrans = '/home/dimeng/project/domain_linker/data/caid/features/protTrans'
+'''
+path_input = ''
+path_msaTrans = ''
+path_protTrans = ''
 
 '''
 2.Output folder
@@ -26,4 +26,4 @@ an example:
 ---------------------
 path_output = '/home/dimeng/caid3/punch_linker_output'
 '''
-path_output = '/home/dimeng/caid3/punch_linker_output'
+path_output = ''
