@@ -22,7 +22,8 @@ Note,
 (We maintain this separation due to the requirements from [CAID3](https://caid.idpcentral.org/challenge), but we may edit or merge them in the future.)
 ### Docker
 #### Dependencies
-* Docker Desktop 4.27.2 or higher
+* [ProtTrans](https://github.com/agemagician/ProtTrans) and [MSA Transformer](https://github.com/facebookresearch/esm) embedded sequences;
+* Docker Desktop 4.27.2 or higher;
 #### Installing
 * Go to Dockerhub
 * Get the project
