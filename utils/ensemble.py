@@ -13,6 +13,7 @@ from torch import optim
 
 # from dataset.domainLinker_dataset import DomainLinkerDataset, Sequence, collate_fn
 from dataset.utils import read_plm
+from utils.static import bcolors
 
 from utils.common import dump_list2json, read_json2list
 import params.filePath as paramF
@@ -69,9 +70,14 @@ def get_true_pred(model, entity_id, feature_type, path_msaTrans, path_protTrans)
         pred - the predictor output.
     '''
     if feature_type=='protTrans':
-        seq_embedded = read_plm(os.path.join(path_protTrans, '{}.npy'.format(entity_id)))
+        path_f = os.path.join(path_protTrans, '{}.npy'.format(entity_id))
     elif feature_type=='msa_transformer':
-        seq_embedded = read_plm(os.path.join(path_msaTrans, '{}.npy'.format(entity_id)))
+        path_f = os.path.join(path_msaTrans, '{}.npy'.format(entity_id))
+    if os.path.isfile(path_f):
+        seq_embedded = read_plm(path_f)
+    else: 
+        print(f"{bcolors.WARNING}Warning: cannot find file: {path_f}{bcolors.ENDC}")
+        return None
 
     data = torch.tensor(np.array(seq_embedded)[0].T).unsqueeze(0).to(device)
     pred = model(data).tolist()[0]
@@ -96,6 +102,10 @@ def ensemble_predict(models, list_modelInfo, entity_id, path_msaTrans, path_prot
             if feature_type=='msa_transformer' and (msaTrans is False):
                 continue
             pred = get_true_pred(model, entity_id, feature_type, path_msaTrans, path_protTrans)
+            
+            # embedded sequence not exist.
+            if pred is None:
+                continue
             predictions.append(pred)
         # Average the predictions (you can use other strategies like weighted averaging)
         ensemble_prediction = torch.tensor(predictions).mean(dim=0)

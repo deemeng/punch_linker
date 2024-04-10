@@ -70,7 +70,6 @@ if __name__ == "__main__":
         msaTrans = True
         if entity_length>1022:
             msaTrans = False
-            
         # get prediction
         avg_pred = ensemble_predict(models, list_modelInfo, entity_id, paramF.path_msaTrans, paramF.path_protTrans, msaTrans)
         pred_label = get_pred_label(avg_pred, threshold=paramH.label_threshold)
