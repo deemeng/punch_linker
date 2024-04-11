@@ -71,7 +71,9 @@ di.meng@ucdconnect.ie
 
 ## Authors
 📬 Di Meng - di.meng@ucdconnect.ie \
-📬 Gianluca Pollastri - gianluca.pollastri@ucd.ie 
+📬 Juliana Glavina - jglavina@iib.unsam.edu.ar \
+📬 Gianluca Pollastri - gianluca.pollastri@ucd.ie \
+📬 Lucia Chemes - luchemes@gmail.com
 
 ## Project
 >https://github.com/deemeng/punch_linker
