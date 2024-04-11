@@ -57,7 +57,6 @@ if __name__ == "__main__":
     3. Prediction & saving results
     '''
     list_entity = read_json2list(paramF.path_input_json)
-    df_caid= pd.DataFrame(list_entity)
     
     list_seq_id = []
     list_timing = []
