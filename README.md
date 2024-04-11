@@ -27,7 +27,7 @@ Note,
 #### Installing
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/punch_linker/tags">DockerHub</a>
   ```sh
-  docker pull dimeng851/punch_linker:v1
+  docker pull dimeng851/punch_linker:v2
   ```
 
 #### Executing program
