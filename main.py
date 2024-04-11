@@ -24,7 +24,7 @@ from params.utils import create_folder
 
 if __name__ == "__main__":
     
-    comment = f'Running DOFO, started {str(datetime.datetime.now())}'
+    comment = f'Running PUNCH_Linker, started {str(datetime.datetime.now())}'
     print(comment)
     '''
     1. JSON file
