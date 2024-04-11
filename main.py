@@ -9,6 +9,7 @@ from Bio import SeqIO
 
 import json
 import datetime
+import time
 import argparse
 import shutil
 
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     list_timing = []
 
     for entity in list_entity:
-        t_start = datetime.datetime.now()
+        t_start = round(time.time() * 1000)
         entity_id = entity['id']
         entity_seq = entity['sequence']
         entity_length = len(entity_seq)
@@ -74,7 +75,7 @@ if __name__ == "__main__":
         pred_label = get_pred_label(avg_pred, threshold=paramH.label_threshold)
         predInfo = {'id': entity_id, 'sequence': entity_seq, 'pred': avg_pred.tolist(), 'label': pred_label}
         
-        t_end = datetime.datetime.now()
+        t_end = round(time.time() * 1000)
         timing = t_end - t_start
         
         list_seq_id.append(entity_id)

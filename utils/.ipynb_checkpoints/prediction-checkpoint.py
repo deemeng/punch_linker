@@ -27,7 +27,7 @@ def save_prediction(folder, dict_pred_info):
     with open(file_path, 'w') as f:
         f.write(f">{dict_pred_info["id"]}\n")
         for i, r, p, l in zip(idx, seq, pred, pred_label):
-            f.write(f"{i}\t{r}\t{p}\t{l}\n")
+            f.write(f"{i}\t{r}\t{round(p, 3)}\t{l}\n")
 
 def save_timing(path_timing, list_id, list_timing, comment=''):
     '''
